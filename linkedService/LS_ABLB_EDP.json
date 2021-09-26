@@ -1,0 +1,17 @@
+{
+	"name": "LS_ABLB_EDP",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LS_AKEY_EDP",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "SCR-LS-ABLB-ConnectionString"
+			}
+		}
+	}
+}
