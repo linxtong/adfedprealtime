@@ -1,0 +1,61 @@
+{
+	"name": "PL_Data_Demo",
+	"properties": {
+		"activities": [
+			{
+				"name": "SETV_Demo",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "vModule",
+					"value": ""
+				}
+			},
+			{
+				"name": "LKP_ViewSource",
+				"type": "Lookup",
+				"dependsOn": [
+					{
+						"activity": "SETV_Demo",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "DS_Customer_ADLS_Txt",
+						"type": "DatasetReference"
+					}
+				}
+			}
+		],
+		"variables": {
+			"vModule": {
+				"type": "String",
+				"defaultValue": "Demo"
+			}
+		},
+		"annotations": []
+	}
+}

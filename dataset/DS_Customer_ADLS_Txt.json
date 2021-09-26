@@ -1,0 +1,23 @@
+{
+	"name": "DS_Customer_ADLS_Txt",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ABLB_EDP",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Customer.csv",
+				"container": "masterdata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
