@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfedprealtime"
+		},
+		"LS_AKEY_EDP_properties_typeProperties_baseUrl": {
+			"value": "https://keyedprealtime.vault.azure.net/"
+		},
+		"LS_ABLB_EDP_properties_typeProperties_connectionString_secretName": {
+			"value": "SCR-LS-ABLB-ConnectionString"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
