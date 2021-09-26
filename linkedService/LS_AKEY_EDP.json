@@ -1,0 +1,10 @@
+{
+	"name": "LS_AKEY_EDP",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://keyedprealtime.vault.azure.net/"
+		}
+	}
+}
