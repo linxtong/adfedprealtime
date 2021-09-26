@@ -1,0 +1,9 @@
+{
+	"name": "adfedprealtime",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1b608882-8528-4145-915b-1df72576b87d",
+		"tenantId": "cf36141c-ddd7-45a7-b073-111f66d0b30c"
+	}
+}
